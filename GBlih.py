@@ -108,6 +108,7 @@ class GBlih:
         if answer is True:
             self.__exec_command('repository delete ' + rep)
             print("Here i'm deleting " + rep)
+            self.scroll_rep.update(self.__exec_command('repository list'))
 
     def win_acl(self):
         lusr = read_file('/home/nicolas/.acl_user')
